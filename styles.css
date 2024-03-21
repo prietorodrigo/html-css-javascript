@@ -1,0 +1,352 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(105px, auto);
+}
+
+/* Cabeçalho*/
+header {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-image: radial-gradient(#15832a, #065f17);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 125px;
+}
+
+.logo img{
+  height: 80px;
+}
+
+.menu {
+  margin-left: auto;
+  margin-right: 125px;
+  z-index: 1;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  position: relative;
+  display: inline-block;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.menu ul.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #008800;
+  padding: 10px;
+  min-width: 120px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu li:hover ul.submenu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.submenu li:hover {
+  background-color: #006600;
+}
+
+.menu ul.submenu li {
+  margin-bottom: 5px;
+}
+
+/* Contador dias Processo Seletivo*/
+.contagem-regressiva {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-image: url(img/banner.jpg);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 125px 20px 125px;
+}
+
+.aviso h2 {
+  font-size: 20px;
+  color: black;
+  margin: 0;
+}
+
+#contador-dias {
+  font-weight: bold;
+  font-size: 28px;
+  color: #ff6347;
+}
+
+.mais-info p {
+  font-size: 16px;
+  color: black;
+  text-align: right;
+  margin: 0;
+}
+
+.mais-info a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Noticia principal*/
+.principal {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-image: url(img/noticiaprincipal.jpg);
+  background-repeat: no-repeat;
+  background-size: auto 1250px;
+  height: 600px;
+  width: 1254px;
+  background-position: center;
+  margin: 0px auto 30px auto;
+}
+
+.principal p {
+  padding: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 90%;
+  width: 81.2%;
+}
+
+.principal a {
+  text-decoration: none;
+}
+
+/* Parceitos (UTU e UTEC)*/
+.patrocinadores {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  text-align: center;
+  color: white;
+  margin: 0px 125px 40px 125px;
+  background-image: linear-gradient(to bottom, #003865, #0c82b5);
+}
+
+.patrocinadores h1{
+  font-size: 2em;
+  font-weight: normal;
+}
+
+.patrocinadores img {
+  height: 100px;
+  padding: 0px 20px 0px 20px;
+  margin-bottom: 20px;
+}
+
+/* Notícias*/
+.noticias {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  margin: 30px 125px 30px 125px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(196px, auto);
+  gap: 20px;
+}
+
+.noticia {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.noticia a {
+  text-decoration-color: black;
+}
+
+.noticia p {
+  position: absolute;
+  top: 43.5%;
+  width: 93.2%;
+  padding: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+}
+
+.noticia img {
+  width: 100%;
+}
+
+/*Depoimentos de estudantes*/
+.depoimentos {
+  max-width: 800px;
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  margin-bottom: 50px;
+}
+
+.depoimentos-slider {
+  position: relative;
+}
+
+.depoimento {
+  display: none;
+}
+
+.ativo {
+  display: block;
+}
+
+.depoimento img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.depoimento p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+.depoimento-autor {
+  font-style: italic;
+}
+
+.troca-depoimento {
+  margin-top: 20px;
+}
+
+.pontos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.ponto {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.ponto-ativo {
+  background-color: #717171;
+}
+
+/* Noticia completa*/
+.noticia-completa {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.noticia-completa h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.noticia-completa a{
+  color: #08c;
+  text-decoration: underline;
+  outline: medium none;
+}
+
+.noticia-completa p{
+  text-align: justify;
+}
+
+.noticia-completa a:visited{
+  text-decoration: none;
+}
+
+.imagenes {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.miniaturas {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.miniatura {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.miniatura:last-child {
+  margin-right: 0;
+}
+
+.imagem-principal {
+  width: 100%;
+  text-align: center;
+}
+
+img#imagemPrincipal {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Rodapé*/
+footer {
+  background-color: #00420c;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nomeSite {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #61b06f;
+}
+
+.desenvolvedor {
+  font-size: 14px;
+  color: white;
+}

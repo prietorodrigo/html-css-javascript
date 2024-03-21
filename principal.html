@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFNews</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="grid">
+        <header>
+            <div class="logo">
+                <a href="principal.html"><img src="img/logo.png"></a>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="#">Categorias</a>
+                        <ul class="submenu">
+                            <li><a href="esportes.html">Esportes</a></li>
+                            <li><a href="#">Eventos</a></li>
+                            <li><a href="#">Institucional</a></li>
+                            <li><a href="#">Premiações</a></li>
+                            <li><a href="#">Envie uma notícia</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="contagem-regressiva">
+            <div class="aviso">
+                <h2>Faltam <span id="contador-dias"></span> dias para o próximo Processo Seletivo do IFSul</h2>
+            </div>
+            <div class="mais-info">
+                <p>Mais informações <a href="#">aqui</a></p>
+            </div>
+        </div>
+        <div class="principal">
+            <a href="noticia-completa.html">
+                <p>IFSul promove 3º Congresso de Tecnologia da Informação em Passo Fundo</p>
+            </a>
+        </div>
+        <div class="noticias">
+            <div class="grid3">
+                <div class="noticia">
+                    <img src="img/noticia1.jpg">
+                    <a href="#">
+                        <p><b>Termina nesta sexta-feira (19), às 16h, o período de inscrições do Vestibular 2023/2 para
+                                cursos técnicos do IFSul</b></p>
+                    </a>
+                </div>
+                <div class="noticia">
+                    <img src="img/noticia2.png">
+                    <a href="#">
+                        <p><b>Inscrições abertas para ciclo de palestras do 2º Fórum Ambiental do IFSul em Pelotas</b>
+                        </p>
+                    </a>
+                </div>
+                <div class="noticia">
+                    <img src="img/noticia3.jpg">
+                    <a href="#">
+                        <p><b>Vestibular IFSul 2023/2 segue com inscrições abertas</b></p>
+                    </a>
+                </div>
+                <div class="noticia">
+                    <img src="img/noticia4.jpg">
+                    <a href="#">
+                        <p><b>Inscrições para docentes permanentes para o Programa de Pós-graduação em Educação
+                                Profissional e Tecnológica</b></p>
+                    </a>
+                </div>
+                <div class="noticia">
+                    <img src="img/noticia5.jpg">
+                    <a href="#">
+                        <p><b>IFSul promove diversas atividades culturais no câmpus Pelotas</b></p>
+                    </a>
+                </div>
+                <div class="noticia">
+                    <img src="img/noticia6.jpg">
+                    <a href="#">
+                        <p><b>Documentário histórico de importante folclorista gaúcho é recuperado por meio de
+                                iniciativa do IFSul e do IFRS</b></p>
+                    </a>
+                </div>
+                <div class="noticia">
+                    <img src="img/noticia7.jpeg">
+                    <a href="#">
+                        <p><b>Maior evento esportivo do câmpus Pelotas teve início neste sábado</b></p>
+                    </a>
+                </div>
+                <div class="noticia">
+                    <img src="img/noticia8.jpg">
+                    <a href="#">
+                        <p><b>IFSul passa a integrar a coordenação de tradicional evento do sul do País voltado ao
+                                estudo da obra de Paulo Freire</b></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="patrocinadores">
+            <h1>Nossos parceiros</h1>
+            <a href="https://www.utu.edu.uy/" target="_blank"><img src="img/logo1.png" id="logo1"></a>
+            <a href="https://utec.edu.uy/" target="_blank"><img src="img/logo2.png" id="logo2"></a>
+        </div>
+        <div class="depoimentos">
+            <h1>Depoimentos de estudantes</h1>
+            <div class="depoimentos-slider">
+                <div class="depoimento ativo">
+                    <img src="img/avatar1.png">
+                    <p>"IFSul me brindó una educación de calidad y oportunidades para desarrollar mis habilidades prácticas."</p>
+                    <p class="depoimento-autor">- Tereza Da Silva</p>
+                </div>
+                <div class="depoimento">
+                    <img src="img/avatar2.jpg">
+                    <p>"Gracias a IFSul, adquirí conocimientos relevantes y obtuve una sólida base para mi futuro profesional."</p>
+                    <p class="depoimento-autor">- Rodrigo Prieto</p>
+                </div>
+                <div class="depoimento">
+                    <img src="img/avatar3.jpg">
+                    <p>"La institución IFSul me proporcionó un entorno de aprendizaje inspirador y docentes comprometidos con mi éxito."</p>
+                    <p class="depoimento-autor">- Luis Suárez</p>
+                </div>
+                <!-- Agrega más testimonios aquí -->
+            </div>
+
+            <div class="troca-depoimento">
+                <div class="pontos">
+                    <span class="ponto ativo" onclick="depoimentoAtual(1)"></span>
+                    <span class="ponto" onclick="depoimentoAtual(2)"></span>
+                    <span class="ponto" onclick="depoimentoAtual(3)"></span>
+                    <!-- Agrega más puntitos de testimonio aquí -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <span class="nomeSite">IFNews</span>
+    <span class="desenvolvedor">Desenvolvido por Rodrigo Prieto</span>
+</footer>
+<script>
+    /* Depoimentos */
+    var indiceDepoimentoAtual = 1;
+    mostrarDepoimento(indiceDepoimentoAtual);
+
+    function depoimentoAtual(n) {
+        mostrarDepoimento(indiceDepoimentoAtual = n);
+    }
+
+    function mostrarDepoimento(n) {
+        var depoimentos = document.getElementsByClassName('depoimento');
+        var pontos = document.getElementsByClassName('ponto');
+        for (var i = 0; i < depoimentos.length; i++) {
+            depoimentos[i].style.display = 'none';
+        }
+        for (var i = 0; i < pontos.length; i++) {
+            pontos[i].classList.remove('ponto-ativo');
+        }
+        depoimentos[indiceDepoimentoAtual - 1].style.display = 'block';
+        pontos[indiceDepoimentoAtual - 1].classList.add('ponto-ativo');
+    }
+
+    // Dias restantes para o Processo Seletivo
+    function obterDiasRestantes() {
+        const hoje = new Date();
+        var dataProcSelet = new Date(2023, 10, 29, 23, 59, 59, 999); // Seta dia e mês
+        dataProcSelet.setFullYear(hoje.getFullYear()); // Seta o ano para esse ano
+        var msPorDia = 24 * 60 * 60 * 1000; // Quantidade de milisegundos por dia
+        var diasRestantes = (dataProcSelet.getTime() - hoje.getTime()) / msPorDia;
+        var diasRestantes = Math.round(diasRestantes); //retorna os dias restantes no ano
+        return diasRestantes;
+    }
+    document.getElementById('contador-dias').textContent = obterDiasRestantes();
+
+    // Submenu
+    document.addEventListener('DOMContentLoaded', function () {
+        const categoriasItem = document.querySelector('.menu > ul > li');
+
+        categoriasItem.addEventListener('mouseover', function () {
+            this.classList.add('active');
+        });
+
+        categoriasItem.addEventListener('mouseout', function () {
+            this.classList.remove('active');
+        });
+    });
+
+    // Nossos parceiros
+    document.getElementById('logo1').onmouseover = function () {
+        const aumentaFonte = document.getElementById('logo1').value;
+        document.getElementById("logo1").style.filter = "drop-shadow(2px 2px 5px gold)";
+    }
+
+    document.getElementById('logo1').onmouseout = function () {
+        const aumentaFonte = document.getElementById('logo1').value;
+        document.getElementById("logo1").style.filter = "";
+    }
+
+    document.getElementById('logo2').onmouseover = function () {
+        const aumentaFonte = document.getElementById('logo2').value;
+        document.getElementById("logo2").style.filter = "drop-shadow(2px 2px 5px black)";
+    }
+
+    document.getElementById('logo2').onmouseout = function () {
+        const aumentaFonte = document.getElementById('logo2').value;
+        document.getElementById("logo2").style.filter = "";
+    }
+
+</script>
+
+</html>
